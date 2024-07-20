@@ -3,9 +3,7 @@ Este proyecto es una automatización de pruebas de interfaz de usuario utilizand
 ## Historia de usuario #1  Inicio de sesión 
 
 ### Descripción: 
-**Como** administrador.
-**Quiero** poder diligenciar mis credenciales en la página de inicio de sesión.
-**Para** proceder ingresar a la página principal de orangehrmlive. 
+**Como** administrador **quiero** poder diligenciar mis credenciales en la página de inicio de sesión **para** proceder a ingresar a la página principal de orangehrmlive. 
 
 ### Criterios de aceptación: 
 - El administrador debe poder ingresar correctamente su nombre de usuario en la entrada de nombre de usuario. 
