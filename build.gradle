@@ -1,3 +1,8 @@
+defaultTasks 'clean', 'test', 'aggregate'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
 version '1.0-SNAPSHOT'
 
 tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
@@ -39,5 +44,6 @@ dependencies {
     implementation group: 'org.jvnet.com4j', name: 'com4j', version: '2.1'
     implementation group: 'com.codoid.products', name: 'fillo', version: '1.21'
     implementation group: 'io.appium', name: 'java-client', version: '4.1.2'
+    testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
 
 }
