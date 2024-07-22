@@ -9,6 +9,8 @@ import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class WaitElement implements Interaction {
 
 
@@ -38,7 +40,8 @@ public class WaitElement implements Interaction {
     }
 
     private WebDriverWait waitAs(Actor actor) {
-        return new WebDriverWait(BrowseTheWeb.as(actor).getDriver(), 180);
+        WebDriverWait webDriverWait = new WebDriverWait(BrowseTheWeb.as(actor).getDriver(), 180);
+        return webDriverWait;
     }
 
 
