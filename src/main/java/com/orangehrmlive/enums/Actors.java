@@ -3,6 +3,7 @@ package com.orangehrmlive.enums;
 public enum Actors {
 
     USER("Admin");
+
     String name;
 
     Actors(String msj) {

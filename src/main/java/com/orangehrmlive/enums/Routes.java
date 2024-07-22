@@ -5,14 +5,14 @@ public enum Routes {
     SITE_URL("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"),
     LOGIN_FEATURE("src/test/resources/features/login.feature");
 
-    String constant;
+    String route;
 
 
     Routes(String msj) {
-        this.constant  = msj;
+        this.route = msj;
     }
 
     public String getConstant() {
-        return constant;
+        return route;
     }
 }
