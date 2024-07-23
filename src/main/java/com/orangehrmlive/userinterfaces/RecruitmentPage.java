@@ -21,5 +21,14 @@ public class RecruitmentPage {
     public static final Target TXT_CONTACT_NUMBER = Target.the("contact number input")
             .locatedBy("(//input[@placeholder='Type here'])[2]");
 
+    public static final Target SLT_VACANCY = Target.the("vacancy selection")
+            .locatedBy("//div[@class='oxd-select-text-input']");
+
+    public static final Target SLT_OPTION = Target.the("select option {0}")
+            .locatedBy("(//div[@class='oxd-select-wrapper']//div)[4]//div//*[contains(text(),'{0}')]");
+
+
+
+
 
 }
