@@ -9,11 +9,11 @@ public class CandidateInformation {
     private final String email;
     private final String contactNumber;
     private final String keywords;
-    private final String dataOfApplication;
+    private final String dateOfApplication;
     private final String note;
     private final String consentToKeepData;
 
-    public CandidateInformation(String firstName, String middleName, String lastName, String vacancy, String email, String contactNumber, String keywords, String dataOfApplication, String note, String consentToKeepData) {
+    public CandidateInformation(String firstName, String middleName, String lastName, String vacancy, String email, String contactNumber, String keywords, String dateOfApplication, String note, String consentToKeepData) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -21,7 +21,7 @@ public class CandidateInformation {
         this.email = email;
         this.contactNumber = contactNumber;
         this.keywords = keywords;
-        this.dataOfApplication = dataOfApplication;
+        this.dateOfApplication = dateOfApplication;
         this.note = note;
         this.consentToKeepData = consentToKeepData;
     }
@@ -54,8 +54,8 @@ public class CandidateInformation {
         return keywords;
     }
 
-    public String getDataOfApplication() {
-        return dataOfApplication;
+    public String getDateOfApplication() {
+        return dateOfApplication;
     }
 
     public String getNote() {

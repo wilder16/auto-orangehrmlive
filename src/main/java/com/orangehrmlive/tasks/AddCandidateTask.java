@@ -1,5 +1,7 @@
 package com.orangehrmlive.tasks;
 
+import com.orangehrmlive.interactions.OptionSelection;
+import com.orangehrmlive.interactions.SelectDateApplication;
 import com.orangehrmlive.models.CandidateInformation;
 import com.orangehrmlive.userinterfaces.DashboardPage;
 import com.orangehrmlive.userinterfaces.RecruitmentPage;
@@ -25,16 +27,31 @@ public class AddCandidateTask implements Task {
         actor.attemptsTo(
                 Enter.theValue(candidateInformation.getFirstName()).into(RecruitmentPage.TXT_FIRST_NAME),
                 Enter.theValue(candidateInformation.getMiddleName()).into(RecruitmentPage.TXT_MIDDLE_NAME),
-                Enter.theValue(candidateInformation.getLastName()).into(RecruitmentPage.TXT_LAST_NAME),
+                Enter.theValue(candidateInformation.getLastName()).into(RecruitmentPage.TXT_LAST_NAME));
+
+        actor.attemptsTo(
+                OptionSelection.select(RecruitmentPage.SLT_VACANCY,
+                        RecruitmentPage.SLT_OPTION.of(candidateInformation.getVacancy())));
+
+        actor.attemptsTo(
                 Enter.theValue(candidateInformation.getEmail()).into(RecruitmentPage.TXT_EMAIL),
-                Enter.theValue(candidateInformation.getContactNumber()).into(RecruitmentPage.TXT_CONTACT_NUMBER)
-        );
+                Enter.theValue(candidateInformation.getContactNumber()).into(RecruitmentPage.TXT_CONTACT_NUMBER),
+                Enter.theValue(candidateInformation.getKeywords()).into(RecruitmentPage.TXT_KEYWORD));
+
+        actor.attemptsTo(
+                SelectDateApplication.selectDate(RecruitmentPage.CALENDAR,
+                        candidateInformation.getDateOfApplication()),
+                Enter.theValue(candidateInformation.getNote()).into(RecruitmentPage.TXT_AREA_NOTE));
+
+
+
+
 
 
     }
 
 
-    public static AddCandidateTask enterCandidateInformation(CandidateInformation candidateInformation){
+    public static AddCandidateTask enterCandidateInformation(CandidateInformation candidateInformation) {
         return Tasks.instrumented(AddCandidateTask.class, candidateInformation);
     }
 

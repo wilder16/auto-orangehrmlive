@@ -21,5 +21,36 @@ public class RecruitmentPage {
     public static final Target TXT_CONTACT_NUMBER = Target.the("contact number input")
             .locatedBy("(//input[@placeholder='Type here'])[2]");
 
+    public static final Target SLT_VACANCY = Target.the("vacancy selection")
+            .locatedBy("//div[@class='oxd-select-text-input']");
+
+    public static final Target SLT_OPTION = Target.the("select option {0}")
+            .locatedBy("(//div[@class='oxd-select-wrapper']//div)[4]//div//*[contains(text(),'{0}')]");
+
+    public static final Target TXT_KEYWORD
+            = Target.the("keywords input")
+            .locatedBy("//input[@placeholder= 'Enter comma seperated words...']");
+
+    public static final Target CALENDAR
+            = Target.the("calendar input")
+            .locatedBy("//input[contains(@placeholder, 'yyyy')]");
+
+    public static final Target SELECTED_YEAR
+            = Target.the("select year")
+            .locatedBy("//div[@class='oxd-date-input-calendar']//div[@class='oxd-calendar-selector-year-selected']//p[text()= '{0}']");
+
+    public static final Target TXT_AREA_NOTE
+            = Target.the("text area note").locatedBy("//textarea");
+
+    public static final Target CHKB_AREA_NOTE
+            = Target.the("CONSENT_TO_KEEP_DATA").locatedBy("//div[@class= 'oxd-checkbox-wrapper']//span");
+
+
+
+
+
+
+
+
 
 }
