@@ -33,11 +33,17 @@ public class RecruitmentPage {
 
     public static final Target CALENDAR
             = Target.the("calendar input")
-            .locatedBy("//input[@placeholder='dd-mm-yyyy']");
+            .locatedBy("//input[contains(@placeholder, 'yyyy')]");
 
     public static final Target SELECTED_YEAR
             = Target.the("select year")
             .locatedBy("//div[@class='oxd-date-input-calendar']//div[@class='oxd-calendar-selector-year-selected']//p[text()= '{0}']");
+
+    public static final Target TXT_AREA_NOTE
+            = Target.the("text area note").locatedBy("//textarea");
+
+    public static final Target CHKB_AREA_NOTE
+            = Target.the("CONSENT_TO_KEEP_DATA").locatedBy("//div[@class= 'oxd-checkbox-wrapper']//span");
 
 
 

@@ -29,14 +29,23 @@ public class AddCandidateTask implements Task {
                 Enter.theValue(candidateInformation.getMiddleName()).into(RecruitmentPage.TXT_MIDDLE_NAME),
                 Enter.theValue(candidateInformation.getLastName()).into(RecruitmentPage.TXT_LAST_NAME));
 
-        actor.attemptsTo(OptionSelection.select(RecruitmentPage.SLT_VACANCY,
+        actor.attemptsTo(
+                OptionSelection.select(RecruitmentPage.SLT_VACANCY,
                         RecruitmentPage.SLT_OPTION.of(candidateInformation.getVacancy())));
 
-        actor.attemptsTo(Enter.theValue(candidateInformation.getEmail()).into(RecruitmentPage.TXT_EMAIL),
+        actor.attemptsTo(
+                Enter.theValue(candidateInformation.getEmail()).into(RecruitmentPage.TXT_EMAIL),
                 Enter.theValue(candidateInformation.getContactNumber()).into(RecruitmentPage.TXT_CONTACT_NUMBER),
                 Enter.theValue(candidateInformation.getKeywords()).into(RecruitmentPage.TXT_KEYWORD));
 
-        actor.attemptsTo(SelectDateApplication.selectDate(RecruitmentPage.CALENDAR, candidateInformation.getDataOfApplication()) );
+        actor.attemptsTo(
+                SelectDateApplication.selectDate(RecruitmentPage.CALENDAR,
+                        candidateInformation.getDateOfApplication()),
+                Enter.theValue(candidateInformation.getNote()).into(RecruitmentPage.TXT_AREA_NOTE));
+
+
+
+
 
 
     }
