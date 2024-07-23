@@ -9,7 +9,7 @@ public class CandidateInformation {
     private final String email;
     private final String contactNumber;
     private final String keywords;
-    private final String dataOfApplication;
+    private final String dateOfApplication;
     private final String note;
     private final String consentToKeepData;
 
@@ -21,7 +21,7 @@ public class CandidateInformation {
         this.email = email;
         this.contactNumber = contactNumber;
         this.keywords = keywords;
-        this.dataOfApplication = dataOfApplication;
+        this.dateOfApplication = dataOfApplication;
         this.note = note;
         this.consentToKeepData = consentToKeepData;
     }
@@ -55,7 +55,7 @@ public class CandidateInformation {
     }
 
     public String getDataOfApplication() {
-        return dataOfApplication;
+        return dateOfApplication;
     }
 
     public String getNote() {

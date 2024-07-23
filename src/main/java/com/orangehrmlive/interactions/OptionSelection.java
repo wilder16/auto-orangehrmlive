@@ -9,12 +9,12 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class Optionselection implements Interaction {
+public class OptionSelection implements Interaction {
 
     private final Target elementDiv;
     private final Target selectOption;
 
-    public Optionselection(Target elementDiv, Target selectOption) {
+    public OptionSelection(Target elementDiv, Target selectOption) {
         this.elementDiv = elementDiv;
         this.selectOption = selectOption;
 
@@ -28,11 +28,10 @@ public class Optionselection implements Interaction {
                 Click.on(elementDiv),
                 WaitUntil.the(selectOption, isVisible()).forNoMoreThan(3).seconds(),
                 Click.on(selectOption));
-
     }
 
-    public static Optionselection select(Target elementDiv, Target selectOption){
-        return Tasks.instrumented(Optionselection.class, elementDiv, selectOption);
+    public static OptionSelection select(Target elementDiv, Target selectOption){
+        return Tasks.instrumented(OptionSelection.class, elementDiv, selectOption);
     }
 
 }

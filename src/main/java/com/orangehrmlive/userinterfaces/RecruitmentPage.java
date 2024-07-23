@@ -27,6 +27,22 @@ public class RecruitmentPage {
     public static final Target SLT_OPTION = Target.the("select option {0}")
             .locatedBy("(//div[@class='oxd-select-wrapper']//div)[4]//div//*[contains(text(),'{0}')]");
 
+    public static final Target TXT_KEYWORD
+            = Target.the("keywords input")
+            .locatedBy("//input[@placeholder= 'Enter comma seperated words...']");
+
+    public static final Target CALENDAR
+            = Target.the("calendar input")
+            .locatedBy("//input[@placeholder='dd-mm-yyyy']");
+
+    public static final Target SELECTED_YEAR
+            = Target.the("select year")
+            .locatedBy("//div[@class='oxd-date-input-calendar']//div[@class='oxd-calendar-selector-year-selected']//p[text()= '{0}']");
+
+
+
+
+
 
 
 
